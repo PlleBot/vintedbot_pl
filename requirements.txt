@@ -1,0 +1,9 @@
+asyncio==3.4.3
+dataset==1.5.2
+hikari==2.0.0.dev106
+hikari-lightbulb==2.2.0
+python-dotenv==0.19.2
+requests==2.26.0
+tenacity==8.0.1
+urllib3==1.26.7
+typing==3.7.4.3
