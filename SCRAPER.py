@@ -55,8 +55,7 @@ def generate_embed(item: Any, sub_id: int) -> hikari.Embed:
     embed.add_field('Price', str(item['price']+'€') or "-1" + '€', inline=True)
     embed.add_field('Size', item['size_title'] or "-1", inline=True)
 
-    date = datetime.utcfromtimestamp(
-        int(item['photo']['high_resolution']['timestamp'])).strftime('%d/%m/%Y, %H:%M:%S')
+    date = datetime.utcfromtimestamp(item['photo']['high_resolution']['timestamp'])
     embed.set_footer(
         f'Published on {date or "unknown"} • Subscription #{str(sub_id)}')
     embed.set_author(name='Posted by ' + item['user']['login'] or "unknown",
